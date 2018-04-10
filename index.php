@@ -8,16 +8,11 @@
 
 echo "<h1>the Caribou Project</h1>";
 
-$message = "<ul>";
+include "./Classes/Voiture.php";
+include "./function/debug.php";
 
-for ($i = -17827 ; $i <=14568 ; $i += 7) {
-    if($i % 24 == 0) {
-        $message .= "<li>";
-        $message .= $i;
-        $message .= "</li>";
-    }
-}
+$voiture1 = new Voiture("jaune", "honda", "900", "155000");
 
-$message = "<ul>";
 
-echo $message;
+echo $voiture1 -> demarrer();
+debug($voiture1);
